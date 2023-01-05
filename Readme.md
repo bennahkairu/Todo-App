@@ -1,6 +1,6 @@
 # Kazi Quest
 
-This presents my implementation of a simple Todo App in **VUE 3** and **Tailwind CSS** and answers to the tehcnical questions asked in the coding test.
+This presents my implementation of a simple Todo App in **VUE 3**, **Tailwind CSS** and answers to the tehcnical questions asked in the coding test.
 
 Checkout the [live example](https://kazi-quest-kairu.netlify.app/) of this project.
 
