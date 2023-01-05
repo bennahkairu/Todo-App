@@ -1,5 +1,5 @@
 <script setup>
-import Todo from "../components/Todo/Todo.vue";
+import Todo from "../components/Todo/TodoWrapper.vue";
 </script>
 
 <template>

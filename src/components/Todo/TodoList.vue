@@ -43,7 +43,7 @@
 
 <script setup>
 import { storeToRefs } from "pinia";
-import { ref, computed } from "vue";
+import { computed } from "vue";
 import TodoItem from "./TodoItem.vue";
 import TodoFilter from "./TodoFilter.vue";
 import { Sortable } from "sortablejs-vue3";

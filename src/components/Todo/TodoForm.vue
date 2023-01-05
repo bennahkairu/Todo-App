@@ -9,7 +9,11 @@
           </span>
         </div>
       </label>
-      <input type="text" v-model="todo.item" placeholder="Create a new todo..." />
+      <input
+        type="text"
+        v-model="todo.item"
+        placeholder="Create a new todo..."
+      />
     </div>
   </form>
 </template>
@@ -18,14 +22,14 @@
 import { ref } from "vue";
 import { useTodoListStore } from "@/stores/useTodoListStore";
 
-const todo = ref({ completed: false, item: '' });
+const todo = ref({ completed: false, item: "" });
 const store = useTodoListStore();
 const todoSubmit = () => {
   if (todo.value.item.trim().length === 0) {
     return;
   }
   store.addTodo(todo.value);
-  todo.value = { completed: false, item: '' }
+  todo.value = { completed: false, item: "" };
 };
 </script>
 

@@ -6,16 +6,16 @@
 </template>
 
 <script setup>
-import TodoForm  from './TodoForm.vue'
-import TodoList  from './TodoList.vue'
+import TodoForm from "./TodoForm.vue";
+import TodoList from "./TodoList.vue";
 </script>
 
 <style>
 .checkbox > .wrapper {
-  @apply flex items-center
+  @apply flex items-center;
 }
 .checkbox .input {
-  @apply relative mr-5 h-6 w-6 cursor-pointer
+  @apply relative mr-5 h-6 w-6 cursor-pointer;
 }
 
 .checkbox .input > input {
@@ -28,20 +28,19 @@ import TodoList  from './TodoList.vue'
 
 .checkbox:hover .input > span,
 .checkbox .input > input:checked ~ span,
-.checkbox .input > input:checked ~ span > span
-{
+.checkbox .input > input:checked ~ span > span {
   @apply bg-gradient-to-br from-sky-blue to-purple;
 }
 
 .checkbox .input > span > span {
-  @apply bg-white dark:bg-blue-500 w-[90%] h-[90%] mx-auto flex items-center justify-center rounded-full transition-all
+  @apply bg-white dark:bg-blue-500 w-[90%] h-[90%] mx-auto flex items-center justify-center rounded-full transition-all;
 }
 
 .checkbox .input > span > span:after {
   @apply opacity-0 bg-white w-3 h-3 transition-opacity;
-  content: '';
-  -webkit-mask: url('@/assets/images/check.svg') no-repeat center;
-  mask: url('@/assets/images/check.svg') no-repeat center;
+  content: "";
+  -webkit-mask: url("@/assets/images/check.svg") no-repeat center;
+  mask: url("@/assets/images/check.svg") no-repeat center;
   -webkit-mask-size: contain;
   mask-size: contain;
 }

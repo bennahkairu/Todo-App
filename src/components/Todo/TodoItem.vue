@@ -1,9 +1,13 @@
 <template>
   <li class="todo-item" :key="element.id">
-    <label class="checkbox" :class="`${element.completed ? 'completed' : ''}`">
+    <label class="checkbox">
       <div class="wrapper">
         <div class="input">
-          <input type="checkbox" v-model="element.completed" />
+          <input
+            type="checkbox"
+            :checked="element.completed"
+            @change="updateTodoStatus($event, element, index)"
+          />
           <span>
             <span></span>
           </span>
@@ -16,13 +20,12 @@
 </template>
 
 <script setup>
-import { Cross } from "@/components/UIElements/Icons.vue";
+import { Cross } from "@/components/UIElements/AppIcons.vue";
 import { useTodoListStore } from "../../stores/useTodoListStore";
 
 defineProps(["element", "index"]);
 const store = useTodoListStore();
-const { deleteTodo } = store;
-
+const { deleteTodo, updateTodoStatus } = store;
 </script>
 
 <style scoped>
