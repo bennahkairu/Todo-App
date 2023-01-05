@@ -12,20 +12,20 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 import { storeToRefs } from "pinia";
 import { useTodoListStore } from "../../stores/useTodoListStore";
 const store = useTodoListStore();
 
-const { activeFilter } = storeToRefs(store);
+const { activeFilter, activeTodos: active, completedTodos: completed } = storeToRefs(store);
 const filterTodo = (type) => (activeFilter.value = type);
 
-const filters = ['all', 'active', 'completed']
-// computed(() => {
-  // const visible = ["all"];
-  // if (active) visible.push("active");
-  // if (completed) visible.push("completed");
-  // return visible;
-// });
+const filters = computed(() => {
+  const filters = ['all']
+  if(active.value.length > 0) filters.push('active')
+  if(completed.value.length > 0) filters.push('completed')
+  return filters
+})
 </script>
 
 <style>

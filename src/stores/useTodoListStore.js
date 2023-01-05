@@ -27,10 +27,12 @@ export const useTodoListStore = defineStore('todolist', {
     clearCompleted () {
       this.todos = this.todos.filter(todo => todo.completed === false)
     },
+    deleteTodo(itemIndex) {
+      this.todos.splice(itemIndex, 1)
+    },
     reorderTodo(from, to) {
       const item = this.todos.splice(from, 1)
       this.todos.splice(to, 0, item[0])
-      // console.log(this.todos)
     }
   }
 })

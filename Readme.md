@@ -1,8 +1,8 @@
-# kazi-quest
+# Kazi Quest
 
 This presents my implementation of a simple Todo App in **VUE 3** and answers to the tehcnical questions asked in the coding test.
 
-Checkout the [live example](https://vitejs.dev/config/) of this project.
+Checkout the [live example](https://kazi-quest-kairu.netlify.app/) of this project.
 
 
 ## Technical Answers
@@ -42,19 +42,9 @@ export default {
 ## Project Setup
 
 ```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
+To install: npm install
+To run: npm run dev
+To build: pm run build
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)

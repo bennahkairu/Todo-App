@@ -10,15 +10,19 @@
         </div>
         <span>{{ element.item }}</span>
       </div>
-      <Cross class="complete" />
+      <Cross class="complete" @click="deleteTodo(index)" />
     </label>
   </li>
 </template>
 
 <script setup>
 import { Cross } from "@/components/UIElements/Icons.vue";
+import { useTodoListStore } from "../../stores/useTodoListStore";
 
-defineProps(["element"]);
+defineProps(["element", "index"]);
+const store = useTodoListStore();
+const { deleteTodo } = store;
+
 </script>
 
 <style scoped>

@@ -12,12 +12,13 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@sentry/tracing": "^7.29.0",
+    "@sentry/vue": "^7.29.0",
     "@vueuse/core": "^9.6.0",
     "pinia": "^2.0.26",
     "sortablejs": "^1.15.0",
     "sortablejs-vue3": "^1.2.3",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
@@ -31,6 +32,7 @@
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-vue": "^9.3.0",
     "jsdom": "^20.0.3",
+    "netlify-cli": "^12.5.0",
     "postcss": "^8.4.19",
     "prettier": "^2.7.1",
     "start-server-and-test": "^1.14.0",

@@ -9,7 +9,7 @@
           @end="(e) => reorderTodo(e.oldIndex, e.newIndex)"
         >
           <template #item="{ element, index }">
-            <TodoItem :element="element" />
+            <TodoItem :element="element" :index="index" />
           </template>
         </Sortable>
       </div>
